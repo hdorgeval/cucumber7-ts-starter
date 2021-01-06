@@ -12,7 +12,7 @@
     },
     "editor.tabCompletion": "on",
     "editor.formatOnPaste": true,
-    "editor.formatOnSave": false,
+    "editor.formatOnSave": true,
     "editor.minimap.enabled": true,
     "editor.minimap.showSlider": "always",
     "editor.minimap.renderCharacters": true,
