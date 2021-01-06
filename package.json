@@ -6,7 +6,7 @@
   "scripts": {
     "build": "rimraf build && npm run format && npm run lint && tsc && npm run cucumber-check",
     "cucumber-check": "node ./node_modules/@cucumber/cucumber/bin/cucumber-js features/**/*.feature --dry-run --require env/set-environment-variables.ts --require world/custom-world.ts --require step-definitions/**/*.ts --require hooks/**/*.ts  --require-module ts-node/register --format-options \"{\\\"snippetInterface\\\": \\\"async-await\\\"}\" --format summary --format progress --format progress-bar  --publish-quiet",
-    "cucumber": "node ./node_modules/@cucumber/cucumber/bin/cucumber-js features/**/*.feature --require env/set-environment-variables.ts --require world/custom-world.ts --require step-definitions/**/*.ts --require hooks/**/*.ts  --require-module ts-node/register --format-options \"{\\\"snippetInterface\\\": \\\"async-await\\\"}\"  --format html:reports/report.html --format pretty --format summary --format progress --format progress-bar  --publish-quiet",
+    "cucumber": "node ./node_modules/@cucumber/cucumber/bin/cucumber-js features/**/*.feature --require env/set-environment-variables.ts --require world/custom-world.ts --require step-definitions/**/*.ts --require hooks/**/*.ts  --require-module ts-node/register --format-options \"{\\\"snippetInterface\\\": \\\"async-await\\\"}\"  --format html:reports/report.html --format summary --format cucumber-console-formatter --publish-quiet",
     "eslint-fix": "eslint ./ --ext .js,.ts,.tsx --fix",
     "eslint-init": "eslint --init",
     "format": "prettier --write \"**/*.{ts,tsx,css,html}\" ",
@@ -36,6 +36,7 @@
     "@types/expect": "24.3.0",
     "@types/lodash": "4.14.167",
     "@types/node": "14.14.20",
+    "cucumber-console-formatter": "0.0.2",
     "expect": "26.6.2",
     "rimraf": "3.0.2",
     "typescript": "4.1.3"
