@@ -11,10 +11,11 @@
     "eslint-init": "eslint --init",
     "format": "prettier --write \"**/*.{ts,tsx,css,html}\" ",
     "lint": "eslint ./ --ext .js,.ts,.tsx --format visualstudio --no-color --max-warnings 10 --report-unused-disable-directives",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "report": "open reports/report.html",
+    "test": "npm run cucumber"
   },
   "engines": {
-    "node": ">=12"
+    "node": ">=14"
   },
   "repository": {
     "type": "git",
