@@ -1,7 +1,7 @@
-import { SimpleMathsCalculator } from '../../domains/simple-maths/simple-maths-calculator';
 import { CustomWorld } from '../../world';
-import expect from 'expect';
+import { SimpleMathsCalculator } from '../../domains/simple-maths/simple-maths-calculator';
 import { Before, Given, Then, When } from '@cucumber/cucumber';
+import expect from 'expect';
 
 Given('I have a simple maths calculator', async function (this: CustomWorld) {
   this.calculator = new SimpleMathsCalculator();
