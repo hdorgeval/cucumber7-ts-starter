@@ -4,6 +4,11 @@
   "description": "Starter project to write and debug cucumber-js features in TypeScript language",
   "main": "index.js",
   "scripts": {
+    "build": "rimraf build && npm run format && npm run lint && tsc",
+    "eslint-fix": "eslint ./ --ext .js,.ts,.tsx --fix",
+    "eslint-init": "eslint --init",
+    "format": "prettier --write \"**/*.{ts,tsx,css,html}\" ",
+    "lint": "eslint ./ --ext .js,.ts,.tsx --format visualstudio --no-color --max-warnings 10 --report-unused-disable-directives",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
