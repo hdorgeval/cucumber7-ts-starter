@@ -4,6 +4,9 @@ build
 #artifacts
 reports
 
+#debug data
+debug-console-formatter
+
 # Logs
 logs
 *.log
