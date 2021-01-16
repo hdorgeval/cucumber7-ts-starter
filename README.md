@@ -68,7 +68,7 @@ Starter project to write and debug cucumber-js v7 features in TypeScript languag
 With cucumber-js v7, you cannot have anymore custom options on the CLI.
 This is a breaking change with cucumber-js v6.
 
-You must use instead environment variables.
+You must instead use environment variables.
 
 When running your tests localy, you can setup environment variables by customizing the file [set-environment-variables.ts](env/set-environment-variables.ts).
 
