@@ -13,6 +13,16 @@ Starter project to write and debug cucumber-js v7 features in TypeScript languag
 
 - run the command `npm test`.
 
+## To choose a reporter
+
+The last reporter/formatter found on the cucumber-js command-line wins:
+
+```text
+--format summary --format @cucumber/pretty-formatter --format cucumber-console-formatter
+```
+
+In [package.json](package.json) file, modify the `cucumber` script to keep only your preferred formatter.
+
 ## To debug a scenario in Visual Studio Code
 
 - tag the scenario with `@debug`
