@@ -25,3 +25,7 @@ test_script:
   - npm test
 cache:
   - '%APPDATA%\npm-cache'
+
+artifacts:
+  - path: 'reports\report.html'
+    name: HtmlReport
