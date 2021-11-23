@@ -5,16 +5,16 @@
   "main": "index.js",
   "scripts": {
     "build": "rimraf build && npm run format && npm run lint && tsc && npm run cucumber-check",
-    "cucumber-check": "node ./node_modules/@cucumber/cucumber/bin/cucumber-js features/**/*.feature --dry-run --require env/set-environment-variables.ts --require world/custom-world.ts --require step-definitions/**/*.ts --require hooks/**/*.ts  --require-module ts-node/register --format-options \"{\\\"snippetInterface\\\": \\\"async-await\\\"}\" --format summary --format progress --format progress-bar  --publish-quiet",
-    "cucumber": "node ./node_modules/@cucumber/cucumber/bin/cucumber-js features/**/*.feature --require env/set-environment-variables.ts --require world/custom-world.ts --require step-definitions/**/*.ts --require hooks/**/*.ts  --require-module ts-node/register --format-options \"{\\\"snippetInterface\\\": \\\"async-await\\\"}\"  --format html:reports/report.html --format summary --format @cucumber/pretty-formatter --format cucumber-console-formatter --publish-quiet",
+    "cucumber-check": "npx cucumber-js --dry-run --format summary --format progress --format progress-bar",
+    "cucumber": "npx cucumber-js --format html:reports/report.html --format summary --format @cucumber/pretty-formatter --format cucumber-console-formatter",
     "eslint-fix": "eslint ./ --ext .js,.ts,.tsx --fix",
     "eslint-init": "eslint --init",
     "format": "prettier --write \"**/*.{ts,tsx,css,html}\" ",
     "lint": "eslint ./ --ext .js,.ts,.tsx --format visualstudio --no-color --max-warnings 10 --report-unused-disable-directives",
     "only": "npm run cucumber -- --tags @only",
     "report": "open reports/report.html",
-    "snippets": "node ./node_modules/@cucumber/cucumber/bin/cucumber-js features/**/*.feature --dry-run --require env/set-environment-variables.ts --require world/custom-world.ts --require step-definitions/**/*.ts --require hooks/**/*.ts  --require-module ts-node/register --format-options \"{\\\"snippetInterface\\\": \\\"async-await\\\"}\" --format snippets  --publish-quiet",
-    "steps-usage": "node ./node_modules/@cucumber/cucumber/bin/cucumber-js features/**/*.feature --dry-run --require env/set-environment-variables.ts --require world/custom-world.ts --require step-definitions/**/*.ts --require hooks/**/*.ts  --require-module ts-node/register --format-options \"{\\\"snippetInterface\\\": \\\"async-await\\\"}\" --format usage  --publish-quiet",
+    "snippets": "npx cucumber-js --dry-run --format snippets",
+    "steps-usage": "npx cucumber-js --dry-run --format usage",
     "test": "npm run cucumber"
   },
   "engines": {
